@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "tsc && protractor compiledOutput/config/config.js",
-    "update": "webdriver-manager update --standalone --versions.standalone=3.8.0 --ignore_ssl",
-    "start": "webdriver-manager start --ignore_ssl"
+    "update": "webdriver-manager update",
+    "start": "webdriver-manager start"
   },
   "keywords": [
     "automation"

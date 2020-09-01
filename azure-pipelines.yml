@@ -24,5 +24,9 @@ steps:
   displayName: 'npm build1'
 
 - script: |
-    npm run test
+    npm run start
   displayName: 'npm build2'
+  
+- script: |
+    npm run test
+  displayName: 'npm build3'

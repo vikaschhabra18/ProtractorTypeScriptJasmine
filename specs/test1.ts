@@ -15,6 +15,6 @@ describe('Protractor Demo App', async function () {
                 // there are only two tabs in the browser
             })
         }
-        // await browser.sleep(19000);
+        await browser.sleep(19000);
     });
 });

@@ -24,7 +24,7 @@ export const config: Config = {
     framework: 'jasmine',
     jasmineNodeOpts: {
         showColors: true,
-        defaultTimeoutInterval: 30000*1000*1000
+        defaultTimeoutInterval: 1000*60*60
     },
     specs: [
         "..//specs//test1.js"

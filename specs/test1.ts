@@ -11,7 +11,7 @@ describe('Protractor Demo App', async function () {
         for (let i = 0; i < 100; i++) {
             await browser.executeScript("window.open(arguments[0], '_blank')", url);
             await browser.getAllWindowHandles().then(async (handles) => {
-                await browser.switchTo().window(handles[i]);    // pass the index, here assuming that
+                await browser.switchTo().window(handles[i+1]);    // pass the index, here assuming that
                 // there are only two tabs in the browser
             })
         }
@@ -20,7 +20,7 @@ describe('Protractor Demo App', async function () {
         for (let i = 100; i < 200; i++) {
             await browser.executeScript("window.open(arguments[0], '_blank')", url1);
             await browser.getAllWindowHandles().then(async (handles) => {
-                await browser.switchTo().window(handles[i]);    // pass the index, here assuming that
+                await browser.switchTo().window(handles[i+1]);    // pass the index, here assuming that
                 // there are only two tabs in the browser
             })
         }
@@ -29,7 +29,7 @@ describe('Protractor Demo App', async function () {
         for (let i = 200; i < 300; i++) {
             await browser.executeScript("window.open(arguments[0], '_blank')", url2);
             await browser.getAllWindowHandles().then(async (handles) => {
-                await browser.switchTo().window(handles[i]);    // pass the index, here assuming that
+                await browser.switchTo().window(handles[i+1]);    // pass the index, here assuming that
                 // there are only two tabs in the browser
             })
         }

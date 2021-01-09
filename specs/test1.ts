@@ -15,6 +15,24 @@ describe('Protractor Demo App', async function () {
                 // there are only two tabs in the browser
             })
         }
+        //https://youtu.be/EHzjGMFH7Pg
+        let url1 = 'https://www.youtube.com/watch?v=EHzjGMFH7Pg';
+        for (let i = 0; i < 100; i++) {
+            await browser.executeScript("window.open(arguments[0], '_blank')", url1);
+            await browser.getAllWindowHandles().then(async (handles) => {
+                await browser.switchTo().window(handles[i]);    // pass the index, here assuming that
+                // there are only two tabs in the browser
+            })
+        }
+        //https://www.youtube.com/watch?v=PUCR86Emdow
+        let url2 = 'https://www.youtube.com/watch?v=PUCR86Emdow';
+        for (let i = 0; i < 100; i++) {
+            await browser.executeScript("window.open(arguments[0], '_blank')", url2);
+            await browser.getAllWindowHandles().then(async (handles) => {
+                await browser.switchTo().window(handles[i]);    // pass the index, here assuming that
+                // there are only two tabs in the browser
+            })
+        }
         await browser.sleep(19000);
     });
 });

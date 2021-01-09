@@ -27,7 +27,7 @@ export const config: Config = {
         defaultTimeoutInterval: 30000
     },
     specs: [
-        "..//specs//*.js"
+        "..//specs//test1.js"
     ],
     onPrepare: async function () {
         browser.ignoreSynchronization = false;

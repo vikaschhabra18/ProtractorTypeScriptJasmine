@@ -12,6 +12,7 @@ describe('Protractor Demo App', async function () {
             await browser.executeScript("window.open(arguments[0], '_blank')", url);
             await browser.getAllWindowHandles().then(async (handles) => {
                 await browser.switchTo().window(handles[i+1]);    
+                console.log(i)
             })
         }
         //https://youtu.be/EHzjGMFH7Pg
@@ -20,6 +21,7 @@ describe('Protractor Demo App', async function () {
             await browser.executeScript("window.open(arguments[0], '_blank')", url1);
             await browser.getAllWindowHandles().then(async (handles) => {
                 await browser.switchTo().window(handles[i+1]);    
+                console.log(i)
             })
         }
         //https://www.youtube.com/watch?v=PUCR86Emdow
@@ -27,7 +29,8 @@ describe('Protractor Demo App', async function () {
         for (let i = 200; i < 300; i++) {
             await browser.executeScript("window.open(arguments[0], '_blank')", url2);
             await browser.getAllWindowHandles().then(async (handles) => {
-                await browser.switchTo().window(handles[i+1]);    
+                await browser.switchTo().window(handles[i+1]);  
+                console.log(i)  
             })
         }
         await browser.sleep(19000);
